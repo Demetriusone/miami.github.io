@@ -1,0 +1,304 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "normalize"
+@import "mixins"
+
+
+
+body
+	font-family: $default-font
+	padding-bottom: 540px
+	background: #fff
+
+.wrap
+	background: #fff
+	position: relative
+	z-index: 200
+	box-shadow: 0 0 10px rgba(#000,.5)
+
+img
+	display: block
+	max-width: 100%
+.input,.textarea
+	color: #393939
+	font-size: 14px
+	text-transform: uppercase
+	width: 100%
+	font-weight: 600
+	height: 52px
+	background: #eeeeee
+	border: none
+	text-align: center
+	+placeholder
+		font-size: 14px
+		color: #393939
+.textarea
+	height: 100px
+	padding: 20px
+	border: none
+	resize: none
+
+
+.form
+	width: 380px
+	&__field
+		margin-bottom: 10px
+.button
+	text-align: center
+	height: 52px
+	text-decoration: none
+	line-height: 52px
+	background: $accent
+	text-transform: uppercase
+	color: #fff
+	font-weight: 600
+	display: block
+	&_inline
+		display: inline-block
+		padding: 0 66px
+		width: auto
+
+
+.container
+	max-width: 940px
+	margin: 0 auto
+
+.hero
+	background-size: cover
+	position: relative
+	background-repeat: no-repeat
+	background-position: 50% 100%
+	.container
+		height: 100vh
+		position: relative
+		min-height: 500px
+.header
+	position: absolute
+	top: 100px
+	left: 0
+	right: 0
+	&__logo
+		position: absolute
+		transform: translate(-50%,0)
+		left: 50%
+		top: -46px
+		width: 110px
+	&__tel
+		font-weight: bold
+		cursor: pointer
+		opacity: 0.6
+		font-size: 16px
+		float: left
+		text-decoration: none
+		color: #fff
+	&__order
+		cursor: pointer
+		text-transform: uppercase
+		border-bottom: 1px #fff dashed
+		font-weight: bold
+		opacity: 0.6
+		float: right
+		text-decoration: none
+		color: #fff
+		font-size: 16px
+.nav
+		position: absolute
+		list-style: none
+		bottom: 60px
+		left: 0
+		right: 0
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		a
+			text-decoration: none
+			color: #fff
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 16px
+.section
+	padding: 130px 0px
+	position: relative
+	&:nth-child(odd)
+		background: #eeeeee
+	&__title
+		top: -.5em
+		position: absolute
+		left: 50%
+		transform: translate(-50%,0)
+		font-size: 48px
+		font-weight: 400
+		text-transform: uppercase
+		font-family: "UbuntuLight"
+		padding-bottom: 15px
+		line-height: 1
+		.icon
+			position: absolute
+			left: 50%
+			transform: translate(-50%,0)
+			margin-bottom: -12px
+			bottom: 0
+		&:after,&:before
+			content: ""
+			height: 2px
+			background: $accent
+			width: calc(50% - 20px)
+			position: absolute
+			bottom: 0
+		&:before
+			left: 0
+		&:after
+			right: 0
+	&__button
+		text-align: center
+		margin-top: 30px
+	&__box
+		display: flex
+		justify-content: space-between
+		.right
+			width: 450px
+			h2
+				font-size: 36px
+				font-family: Ubuntu
+				font-weight: 400
+				line-height: 36px
+				margin-bottom: 48px
+			p
+				font-weight: 700
+
+.best
+	&__wrapper
+		display: flex
+	&__moto
+		font-family: "UbuntuLight"
+		font-weight: 100
+		text-transform: uppercase
+		font-size: 48px
+		width: 45%
+		line-height: 60px
+		font-weight: 400
+		span
+			color: $accent
+	&__text
+		width: 55%
+		font-family: 'UbuntuRegular'
+.textual
+	font-size: 16px
+	line-height: 1.5
+	color: #000
+	p,ol
+		margin-bottom: 1em
+	ol li
+		padding-left: 5px
+	&__big
+		font-size: 24px
+		line-height: 36px
+		font-family: 'UbuntuRegular'
+		font-weight: 400
+		a
+			text-decoration: none
+			color: #000
+
+.apart
+	h2
+		font-family: 'UbuntuRegular'
+		font-size: 16px
+		font-weight: 600
+	span
+		color: $accent
+	margin-bottom: 30px
+	&__photos
+		display: flex
+		margin-bottom: 18px
+	&__photo
+		flex: 1
+		height: 260px
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		&:first-child
+			margin-right: 20px
+	&--left &__photo
+		&:first-child
+			flex: 2
+	&--right &__photo
+		&:last-child
+			flex: 2
+.testi
+	display: flex
+	justify-content: space-between
+.t
+	text-align: center
+	padding: 0 2%
+	&__photo
+		width: 145px
+		height: 145px
+		background-size: cover
+		border-radius: 50%
+		background-position: 50% 50%
+		display: inline-block
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			background-image: url('../img/quotes.png')
+			height: 50px
+			width: 50px
+			background-position: 0 0
+			background-size: contain
+			left: -40px
+			top: 50%
+			margin-top: -15px
+
+
+	&__name
+		font-family: 'UbuntuBold'
+		font-weight: 700
+		font-size: 16px
+		margin-top: 10px
+		color: #000
+	&__position
+		font-size: 16px
+		font-family: 'UbuntuItalic'
+		color: #696973
+		margin-top: 10px
+		font-style: italic
+	&__descr
+		p
+			font-family: 'UbuntuRegular'
+			font-size: 16px
+			margin-top: 10px
+			width: 279px
+			text-align: center
+			line-height: 22px
+
+.contact__block
+	display: flex
+	justify-content: space-between
+
+.footer
+	height: 540px
+	left: 0
+	right: 0
+	bottom: 0
+	position: fixed
+	z-index:  100
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+	&__logo
+		width: 110px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+	&__copy
+		position: absolute
+		color: #fff
+		text-align: center
+		bottom: 60px
+		left: 0
+		right: 0
+		font-size: 16px
+		font-weight: 700
