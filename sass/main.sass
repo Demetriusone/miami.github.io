@@ -20,19 +20,7 @@ body
 img
 	display: block
 	max-width: 100%
-.input,.textarea
-	color: #393939
-	font-size: 14px
-	text-transform: uppercase
-	width: 100%
-	font-weight: 600
-	height: 52px
-	background: #eeeeee
-	border: none
-	text-align: center
-	+placeholder
-		font-size: 14px
-		color: #393939
+
 .textarea
 	height: 100px
 	padding: 20px
@@ -44,6 +32,24 @@ img
 	width: 380px
 	&__field
 		margin-bottom: 10px
+	input,textarea
+		color: #393939
+		font-size: 14px
+		text-transform: uppercase
+		width: 100%
+		font-weight: 600
+		height: 52px
+		background: #eeeeee
+		border: none
+		text-align: center
+		+placeholder
+			font-size: 14px
+			color: #393939
+	.textarea
+		height: 100px
+		padding: 20px
+		border: none
+		resize: none
 .button
 	text-align: center
 	height: 52px
